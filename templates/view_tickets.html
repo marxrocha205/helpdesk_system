@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Chamados</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .card {
+            margin-bottom: 20px;
+        }
+        .high-priority { border-left: 5px solid red; }
+        .medium-priority { border-left: 5px solid orange; }
+        .low-priority { border-left: 5px solid green; }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h2 class="text-center text-primary">Chamados</h2>
+
+        <!-- Filtros -->
+        <form method="GET" action="/view_tickets" class="mb-4">
+            <div class="row">
+                <div class="col-md-3">
+                    <select class="form-select" name="attendant">
+                        <option value="">Selecione o Atendente</option>
+                        <option>Marx</option>
+                        <option>Rodrigo</option>
+                        <option>Rodrigo Budzinsky</option>
+                        <option>Silvio</option>
+                        <option>Eu</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" name="tag" placeholder="Tag">
+                </div>
+                <div class="col-md-3">
+                    <input type="date" class="form-control" name="date">
+                </div>
+                <div class="col-md-3">
+                    <button type="submit" class="btn btn-warning w-100">Filtrar</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Lista de Chamados -->
+        <div class="row">
+            {% for ticket in tickets %}
+            <div class="col-md-6">
+                <div class="card {% if ticket['priority'] == 'Alta' %}high-priority{% elif ticket['priority'] == 'Média' %}medium-priority{% else %}low-priority{% endif %}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ ticket['tag'] }}</h5>
+                        <p class="card-text">{{ ticket['description'] }}</p>
+                        <p><strong>Atendente:</strong> {{ ticket['attendant'] }}</p>
+                        <p><strong>Data:</strong> {{ ticket['date'] }}</p>
+                        <p><strong>Prioridade:</strong> {{ ticket['priority'] }}</p>
+                        <p><strong>Status:</strong> {{ ticket['status'] }}</p>
+                        <a href="/edit_ticket/{{ ticket['id'] }}" class="btn btn-primary btn-sm">Editar</a>
+                        <a href="/delete_ticket/{{ ticket['id'] }}" class="btn btn-danger btn-sm">Excluir</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Paginação -->
+        <div class="d-flex justify-content-between mt-4">
+            <a href="?page={{ prev_page }}" class="btn btn-secondary">Anterior</a>
+            <a href="?page={{ next_page }}" class="btn btn-secondary">Próximo</a>
+        </div>
+    </div>
+</body>
+</html>

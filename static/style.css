@@ -1,0 +1,12 @@
+body {
+    background-color: #f5f5f5;
+}
+
+h2 {
+    color: #ff6600;
+}
+
+.btn-warning {
+    background-color: #ff6600;
+    border-color: #ff6600;
+}

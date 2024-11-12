@@ -1,0 +1,69 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 413-103-783
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 413-103-783
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 413-103-783
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:34:00] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:34:08] "[32mPOST /add_ticket HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:34:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:34:40] "GET /view_tickets HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:34:48] "GET /view_tickets HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:34:55] "[32mPOST /add_ticket HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:34:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:34:57] "GET /view_tickets HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:35:01] "[32mPOST /add_ticket HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:35:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:35:03] "GET /view_tickets HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:35:08] "[35m[1mGET /edit_ticket/2 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:35:08] "GET /edit_ticket/2?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:35:08] "GET /edit_ticket/2?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:35:08] "GET /edit_ticket/2?__debugger__=yes&cmd=resource&f=console.png&s=tEgbzzbZ1MjAzyTmelFa HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:35:08] "GET /edit_ticket/2?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:35:20] "GET /edit_ticket/2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:35:25] "[32mPOST /edit_ticket/2 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:35:25] "GET /view_tickets HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:35:34] "[32mPOST /add_ticket HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:35:34] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:35:35] "GET /view_tickets HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:35:39] "GET /view_tickets?attendant=Rodrigo&tag=&date= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:35:44] "GET /view_tickets?attendant=Rodrigo&tag=&date= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:35:49] "GET /view_tickets?attendant=&tag=&date=2024-11-12 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:35:53] "GET /view_tickets?attendant=Rodrigo&tag=&date= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:35:57] "GET /view_tickets?page= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:35:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:35:58] "GET /view_tickets?page= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:35:58] "GET /view_tickets?page= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:36:32] "[32mPOST /add_ticket HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [11/Nov/2024 23:36:32] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 438-366-108
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 10:08:13] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 10:08:45] "[32mPOST /add_ticket HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 10:08:45] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 10:09:09] "GET /view_tickets HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 10:09:20] "GET /view_tickets?page= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 10:09:22] "GET /edit_ticket/3 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 10:09:25] "[32mPOST /edit_ticket/3 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 10:09:25] "GET /view_tickets HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 10:09:27] "GET /view_tickets HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 10:14:06] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 10:14:10] "[32mPOST /add_ticket HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 10:14:10] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Nov/2024 10:14:12] "GET /view_tickets HTTP/1.1" 200 -
