@@ -1,0 +1,91 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 467-764-676
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:28:00] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:28:00] "GET /static/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:28:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:28:19] "[32mPOST /create_ticket HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:28:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:28:19] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:28:54] "GET /view_tickets?attendant=Rodrigo&tag=&date= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:28:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:28:59] "GET /view_tickets?attendant=Rodrigo&tag=&date= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:28:59] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:29:04] "GET /view_tickets HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:29:04] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:29:09] "GET /view_tickets?attendant=Marx&project=&priority=&is_open= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:29:09] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:29:13] "GET /view_tickets?attendant=Marx&project=&priority=&is_open= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:29:13] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:29:17] "GET /view_tickets?attendant=&project=PayTV&priority=&is_open= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:29:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:29:20] "GET /view_tickets?attendant=&project=&priority=&is_open= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:29:20] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:29:23] "GET /view_tickets?attendant=&project=&priority=&is_open= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:29:23] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:29:26] "GET /view_tickets?attendant=&project=&priority=&is_open= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:29:26] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:29:30] "GET /view_tickets?attendant=&project=&priority=&is_open=True HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:29:30] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:29:32] "GET /view_tickets?attendant=&project=&priority=&is_open=True HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:29:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:29:49] "GET /view_tickets?is_open=True HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:29:49] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/marx/Documentos/chamados_mediapro/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 467-764-676
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:33:12] "GET /view_tickets?is_open=True HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:33:13] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:33:18] "GET /view_tickets?attendant=&project=&priority=&is_open=True HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:33:18] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:33:19] "GET /view_tickets?attendant=&project=&priority=&is_open=True HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:33:19] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:33:21] "GET /view_tickets?attendant=&project=&priority=&is_open=True HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:33:21] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:33:22] "GET /view_tickets?attendant=&project=&priority=&is_open=True HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:33:22] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:33:27] "GET /view_tickets HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:33:27] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:33:31] "GET /view_tickets?attendant=Rodrigo&project=&priority=&is_open= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:33:31] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:33:34] "GET /view_tickets?attendant=Marx&project=&priority=&is_open= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:33:34] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:33:39] "GET /view_tickets?attendant=Marx&project=PayTV&priority=&is_open= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:33:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:33:43] "GET /view_tickets?attendant=Marx&project=Streaming&priority=&is_open= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:33:43] "GET /static/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:33:50] "GET /view_tickets?attendant=Marx&project=Streaming&priority=media&is_open= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:33:50] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:33:54] "GET /view_tickets?attendant=Marx&project=Streaming&priority=alta&is_open= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:33:54] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:33:55] "GET /edit_ticket/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:33:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:33:59] "[32mPOST /edit_ticket/1 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:33:59] "GET /view_tickets HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:33:59] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:34:05] "GET /edit_ticket/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:34:05] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:34:09] "[32mPOST /edit_ticket/1 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:34:09] "GET /view_tickets HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:34:10] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:34:15] "GET /view_tickets?attendant=&project=&priority=&is_open=False HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:34:15] "GET /static/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:34:19] "GET /view_tickets?attendant=&project=&priority=&is_open=True HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:34:19] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/marx/Documentos/chamados_mediapro/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 467-764-676
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:42:01] "GET /view_tickets?attendant=&project=&priority=&is_open=True HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:42:01] "GET /static/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:42:02] "GET /view_tickets?attendant=&project=&priority=&is_open=True HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 09:42:02] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 10:03:27] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2024 10:03:27] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in '/home/marx/Documentos/chamados_mediapro/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Restarting with stat

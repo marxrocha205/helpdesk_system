@@ -1,43 +1,128 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criar Chamado</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-<body class="bg-light">
-    <div class="container mt-5">
-        <h2 class="text-center text-primary">Criar Chamado</h2>
-        <form action="/add_ticket" method="post">
-            <div class="mb-3">
-                <label for="tag" class="form-label">Tag:</label>
-                <input type="text" class="form-control" id="tag" name="tag" required>
-            </div>
-            <div class="mb-3">
-                <label for="description" class="form-label">Descrição:</label>
-                <textarea class="form-control" id="description" name="description" required></textarea>
-            </div>
-            <div class="mb-3">
-                <label for="attendant" class="form-label">Atendente:</label>
-                <select class="form-select" id="attendant" name="attendant">
-                    <option>Marx</option>
-                    <option>Rodrigo</option>
-                    <option>Rodrigo Budzinsky</option>
-                    <option>Silvio</option>
-                    <option>Eu</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="priority" class="form-label">Prioridade:</label>
-                <select class="form-select" id="priority" name="priority">
-                    <option>Alta</option>
-                    <option>Média</option>
-                    <option>Baixa</option>
-                </select>
-            </div>
-            <button type="submit" class="btn btn-warning">Criar Chamado</button>
-        </form>
-    </div>
+
+<body>
+    <div class="d-flex">
+        <!-- Menu Lateral -->
+        <div class="flex-column p-3 bg-light menu-lateral" style="height: 100vh; width: 250px;">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link menu-item {{ 'active' if request.endpoint == 'index' else '' }}" href="{{ url_for('index') }}">Página Inicial</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-item {{ 'active' if request.endpoint == 'view_tickets' else '' }}" href="{{ url_for('view_tickets') }}">Visualizar Chamados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link menu-item {{ 'active' if request.endpoint == 'attendant_report' else '' }}" href="{{ url_for('attendant_report') }}">Relatórios</a>
+                </li>
+            </ul>
+        </div>
+        <div class="container mt-5">
+            <h2>Criar Novo Chamado</h2>
+
+            <form method="POST" action="{{ url_for('create_ticket') }}">
+                <!-- Campo Projeto -->
+                <div class="mb-3">
+                    <label for="project" class="form-label">Projeto</label>
+                    <select class="form-select" id="project" name="project" required>
+                        <option value="">Escolha um projeto</option>
+                        <option value="Streaming">Streaming</option>
+                        <option value="PayTV">PayTV</option>
+                        <option value="Globo">Globo</option>
+                        <option value="Rádios">Rádios</option>
+                    </select>
+                </div>
+
+
+                <!-- Campo Cidade -->
+                <div class="mb-3">
+                    <label for="city" class="form-label">Cidade</label>
+                    <select class="form-select" id="city" name="city" required>
+                        <option value="">Escolha uma cidade</option>
+                    </select>
+                </div>
+
+                <!-- Campo Problema -->
+                <div class="mb-3">
+                    <label for="problem" class="form-label">Problema</label>
+                    <select class="form-select" id="problem" name="problem" required>
+                        <option value="">Escolha o tipo de problema</option>
+                        <option value="Decoder">Decoder</option>
+                        <option value="Conectividade">Conectividade</option>
+                        <option value="Áudio">Áudio</option>
+                        <option value="Vídeo">Vídeo</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                </div>
+
+                <!-- Outros Campos -->
+                <div class="mb-3">
+                    <label for="attendant" class="form-label">Atendente</label>
+                    <select class="form-select" id="attendant" name="attendant" required>
+                        <option value="Marx">Marx</option>
+                        <option value="Rodrigo">Rodrigo</option>
+                        <option value="Rodrigo Budzinsky">Rodrigo Budzinsky</option>
+                        <option value="Silvio">Silvio</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="description" class="form-label">Descrição</label>
+                    <textarea class="form-control" id="description" name="description" rows="4" required></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="priority" class="form-label">Prioridade</label>
+                    <select class="form-select" id="priority" name="priority" required>
+                        <option value="alta">Alta</option>
+                        <option value="media">Média</option>
+                        <option value="baixa">Baixa</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="is_open" class="form-label">Status</label>
+                    <select class="form-select" id="is_open" name="is_open">
+                        <option value="Aberto">Aberto</option>
+                        <option value="Fechado">Fechado</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-laranja">Criar Chamado</button>
+
+            </form>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                // Quando o projeto for selecionado, carrega as cidades correspondentes
+                $('#project').change(function () {
+                    var projeto = $(this).val();
+
+                    if (projeto) {
+                        $.get('/get_cidades', { projeto: projeto }, function (data) {
+                            $('#city').empty();
+                            $('#city').append('<option value="">Escolha uma cidade</option>');
+
+                            data.forEach(function (cidade) {
+                                $('#city').append('<option value="' + cidade.sigla + '">' + cidade.nome + '</option>');
+                            });
+                        });
+                    } else {
+                        $('#city').empty();
+                        $('#city').append('<option value="">Escolha uma cidade</option>');
+                    }
+                });
+            });
+        </script>
 </body>
+
 </html>
